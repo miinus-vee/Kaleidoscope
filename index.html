@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kaleidoscope</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Overlock&family=Rubik:wght@300;400;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+	</head>
+    <body>
+        <section class="homepage">
+            <br><br><br><br><br<br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div id="text-box">
+            <h1>KALEIDOSCOPE</h1>
+            </div>           
+            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br>
+        </section>
+        
+
+
+
+        <section class="slideshow">
+            <br><br><br><br><br>
+            <h3 id="text-box2"><u>S L I D E  S H O W</u></h3>
+            
+            <br><br><br><br>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img src="2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img src="3.jpg" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+          <br><br><br>
+
+          <p id="text-box2">Scroll Down For More Images.</p>
+          <br><br><br><br><br><br><br><br><br>
+        </section>
+        
+
+          <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if(n > slides.length) {
+                slideIndex = 1
+              }
+              if(n < 1) {
+                slideIndex = slides.length
+              }
+              for(i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for(i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex - 1].style.display = "block";
+              dots[slideIndex - 1].className += " active";
+            }
+          </script>
+
+
+        <section class="gallery">
+            <div>
+            <img id="container" src="6.jpg">
+            <img id="container" src="1.jpg">
+            <img id="container" src="4.jpg">
+            
+            <img id="container" src="2.jpg">
+            <img id="container" src="3.jpg">
+            <img id="container" src="4.jpg">
+            <img id="container" src="5.jpg">
+            <img id="container" src="6.jpg">
+            <img id="container" src="1.jpg">
+            
+            <img id="container" src="5.jpg">
+            <img id="container" src="2.jpg">
+            <img id="container" src="3.jpg">
+            </div>
+        </section>
+
+    </body>
+</html>
